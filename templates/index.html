@@ -26,44 +26,22 @@
     </form>
 </div>
 <div class="cards">
-    
-    <div class="card night">
+    {% if data %}
+    {% for city in data %}
+    <div class="card {{city.timezone}}">
         <div class="delete-wrapper">
             <form action="#" method="POST">
                 <input type="hidden" name="id" value="">
                 <button class="delete-button" type="submit">&#10006;</button>
             </form>
         </div>
-        <div class="degrees"><span>9<span class="celsius"> °C</span></span></div>
-        <div class="state">Chilly</div>
-        <div class="city">BOSTON</div>
+        <div class="degrees"><span>{{city.temp}}<span class="celsius"> °C</span></span></div>
+        <div class="state">{{city.weather}}</div>
+        <div class="city">{{city.city}}</div>
     </div>
+    {% endfor %}
+    {% endif %}
 
-    <div class="card day">
-        <div class="delete-wrapper">
-            <form action="#" method="POST">
-                <input type="hidden" name="id" value="">
-                <button class="delete-button" type="submit">&#10006;</button>
-            </form>
-        </div>
-        <div class="degrees"><span>32<span class="celsius"> °C</span></span></div>
-        <div class="state">Sunny</div>
-        <div class="empty"></div>
-        <div class="city">NEW YORK</div>
-    </div>
-
-    <div class="card evening-morning">
-        <div class="delete-wrapper">
-            <form action="#" method="POST">
-                <input type="hidden" name="id" value="">
-                <button class="delete-button" type="submit">&#10006;</button>
-            </form>
-        </div>
-        <div class="degrees"><span>-15<span class="celsius"> °C</span></span></div>
-        <div class="state">Cold</div>
-        <div class="empty"></div>
-        <div class="city">EDMONTON</div>
-    </div>
 </div>
 </body>
 </html>
