@@ -20,7 +20,7 @@
     </div>
     {% endif %}
     {% endwith %}
-    <form action="/" method="POST">
+    <form action="/add" method="POST">
         <input type="text" placeholder="Enter a city name" name="city_name" id="input-city">
         <button type="submit" class="submit-button">Add</button>
     </form>
@@ -30,14 +30,15 @@
     {% for city in data %}
     <div class="card {{city.timezone}}">
         <div class="delete-wrapper">
-            <form action="#" method="POST">
-                <input type="hidden" name="id" value="">
+            <form action="/delete/{{city.id}}" method="POST">
+                <input type="hidden" name="id" value="{{city.id}}">
                 <button class="delete-button" type="submit">&#10006;</button>
             </form>
         </div>
         <div class="degrees"><span>{{city.temp}}<span class="celsius"> °C</span></span></div>
         <div class="state">{{city.weather}}</div>
         <div class="city">{{city.city}}</div>
+        <div class="country">{{city.country}}</div>
     </div>
     {% endfor %}
     {% endif %}

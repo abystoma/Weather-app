@@ -112,7 +112,15 @@ input {
     align-items: flex-end;
     padding-bottom: 6%;
 }
-
+.country {
+	text-align: center;
+	height: 10%;
+	font-size: 2vw;
+	display: flex;
+	justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 6%;
+}
 .day > .state {
 	color: black;
 }
