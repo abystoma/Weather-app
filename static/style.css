@@ -110,12 +110,12 @@ input {
 	display: flex;
 	justify-content: center;
     align-items: flex-end;
-    padding-bottom: 6%;
+    padding-bottom: 2%;
 }
 .country {
 	text-align: center;
 	height: 10%;
-	font-size: 2vw;
+	font-size: 1vw;
 	display: flex;
 	justify-content: center;
     align-items: flex-end;
