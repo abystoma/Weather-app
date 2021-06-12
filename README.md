@@ -23,4 +23,4 @@ A simple Flask app that works with database, handling post and get requests.
 python app.py
 ```
 ## Example
-![gif](https://i.imgur.com/DSVGSX1.gif)
+<img src="https://i.imgur.com/DSVGSX1.gif"/>
